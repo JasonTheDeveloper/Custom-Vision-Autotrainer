@@ -1,4 +1,3 @@
-
 class LabelledBlob:
     download_url: str
     labels: [str]

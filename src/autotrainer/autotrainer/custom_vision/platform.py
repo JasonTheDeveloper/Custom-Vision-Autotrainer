@@ -1,5 +1,5 @@
-
 from enum import Enum
+
 
 class Platform(Enum):
     DOCKER = "DockerFile"
@@ -11,7 +11,6 @@ class Platform(Enum):
         return self.value
 
 
-
 class Flavour(Enum):
     Linux = "Linux"
     Windows = "Windows"
@@ -20,5 +19,3 @@ class Flavour(Enum):
 
     def __str__(self):
         return self.value
-
-

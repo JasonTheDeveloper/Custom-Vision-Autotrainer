@@ -1,11 +1,12 @@
-
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
 from azure.cognitiveservices.vision.customvision.training.models import Project, Tag
+
 
 class Labeller:
 
     tag_dictionary = {}
-    def add_label_if_not_exists(self, trainer: CustomVisionTrainingClient, project: Project, tag_name: str)->Tag:
+
+    def add_label_if_not_exists(self, trainer: CustomVisionTrainingClient, project: Project, tag_name: str) -> Tag:
         """
         Adds a tag to the cache
 
@@ -18,7 +19,7 @@ class Labeller:
         :returns: string
         """
         if len(self.tag_dictionary) == 0:
-            tags=trainer.get_tags(project.id)
+            tags = trainer.get_tags(project.id)
             for tag in tags:
                 self.tag_dictionary[tag.name] = tag
 
