@@ -37,9 +37,17 @@ Upload a set of images from a directory in a single command.
 
 Labels are stored in special *label* files, right next to the image in blob storage.
 
+```bash
+  python src/autotrainer/autotrainer_cli.py catalogue upload -d path/to/your/dataset -l LABEL -c {train|test|holdout}
+```
+
 ### Select data for a Custom Vision project
 
 Select images from your training set, and push them to a Custom Vision project.
+
+```bash
+  python src/autotrainer/autotrainer_cli.py select -c train --project CUSTOM_VISION_PROJECT_ID
+```
 
 ### Train and export your models
 
